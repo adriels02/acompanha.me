@@ -1,0 +1,12 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "AcompanhaMe",
+  "short_name": "AcompanhaMe",
+  "version": "io.cordova.acompanhame",
+  "description": "Aplicativo de Compartilhamento de Localização.",
+  "author": "Apache Cordova Team",
+  "icons": [],
+  "start_url": "index.html",
+  "theme_color": "#2196f3"
+}
