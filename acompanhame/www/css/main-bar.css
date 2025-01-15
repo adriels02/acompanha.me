@@ -1,0 +1,47 @@
+/* Garante que o fundo da main-bar seja sempre o goiaba */
+:root {
+    --branco: #ffff;
+    --preto: #2a2a2a;
+    --goiaba: #DC3B53;
+    --bordo: #BC005E;
+    --marinho: #0F2B72;
+    --azul: #00CBD4;
+}
+body .main-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: var(--goiaba); /* Cor goiaba */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+body .main-bar img.svg-icon {
+    width: 25px;
+    height: 25px;
+    filter: brightness(0) invert(1); /* Branco */
+}
+
+body .main-bar a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: none;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+body .main-bar a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
