@@ -1,75 +1,31 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//     const mainBarHTML = `
-//        <div class="main-bar" id="main-bar">
-//             <a href="disque.html">
-//                 <span class="icon">
-//                  <img src="img/footer_disque.svg" alt="Ícone de alerta" class="svg-icon">
-//                 </span>
-//             </a>
-
-//             <a href="contatos.html">
-//                 <span class="icon">
-//                  <img src="img/footer_contato.svg" alt="Ícone de alerta" class="svg-icon">
-//                 </span>
-//             </a>
-
-//             <a href="home.html">
-//                 <span class="icon">
-//                  <img src="img/footer_home.svg" alt="Ícone de alerta" class="svg-icon">
-//                 </span>
-//             </a>
-            
-//             <a href="sinais.html">
-//                <span class="icon">
-//                  <img src="img/footer_sinais.svg" alt="Ícone de alerta" class="svg-icon">
-//                 </span>
-//             </a>
-
-//             <a href="alerta.html">
-//                 <span class="icon">
-//                  <img src="img/footer_alerta.svg" alt="Ícone de alerta" class="svg-icon">
-//                 </span>
-//             </a>
-//           </div>
-//     `;
-
-//     // Insere o main-bar no final do body
-//     document.body.insertAdjacentHTML('beforeend', mainBarHTML);
-
-//     // Aplica estilo de filtro para SVGs
-//     const svgIcons = document.querySelectorAll('.svg-icon');
-//     svgIcons.forEach((icon) => {
-//         icon.style.filter = 'brightness(0) invert(1)'; // Branco
-//     });
-// });
-
 
 document.addEventListener('DOMContentLoaded', function () {
+    // HTML da barra principal
     const mainBarHTML = `
        <div class="main-bar" id="main-bar">
-            <a href="disque.html">
+            <a href="disque.html" class="link" data-page="disque">
                 <span class="icon">
-                    <img src="img/footer_disque.svg" alt="Ícone de alerta" width="25" height="55">
+                    <img src="img/footer_disque.svg" alt="Ícone de alerta" class="svg-icon">
                 </span>
             </a>
-            <a href="contatos.html">
+            <a href="contatos.html" class="link" data-page="contatos">
                 <span class="icon">
-                    <img src="img/footer_contato.svg" alt="Ícone de alerta" width="25" height="55">
+                    <img src="img/footer_contato.svg" alt="Ícone de alerta" class="svg-icon">
                 </span>
             </a>
-            <a href="home.html">
+            <a href="home.html" class="link" data-page="home">
                 <span class="icon">
-                    <img src="img/footer_home.svg" alt="Ícone de alerta" width="25" height="55">
+                    <img src="img/footer_home.svg" alt="Ícone de alerta" class="svg-icon">
                 </span>
             </a>
-            <a href="sinais.html">
+            <a href="sinais.html" class="link" data-page="sinais">
                 <span class="icon">
-                    <img src="img/footer_sinais.svg" alt="Ícone de alerta" width="25" height="55">
+                    <img src="img/footer_sinais.svg" alt="Ícone de alerta" class="svg-icon">
                 </span>
             </a>
-            <a href="alerta.html">
+            <a href="alerta.html" class="link" data-page="alerta">
                 <span class="icon">
-                    <img src="img/footer_alerta.svg" alt="Ícone de alerta" width="25" height="55">
+                    <img src="img/footer_alerta.svg" alt="Ícone de alerta" class="svg-icon">
                 </span>
             </a>
        </div>
@@ -78,17 +34,21 @@ document.addEventListener('DOMContentLoaded', function () {
     // Insere o main-bar no final do body
     document.body.insertAdjacentHTML('beforeend', mainBarHTML);
 
-    // Ajuste de cor ou estilos baseado na página atual
-    const currentPage = document.body.getAttribute('data-page');
-    const mainBar = document.getElementById('main-bar');
+    // Identifica a página atual pelo pathname
+    const currentPath = window.location.pathname.split('/').pop();
+    const links = document.querySelectorAll('#main-bar .link');
 
-    // Garante que a cor de fundo seja goiaba e os ícones fiquem brancos
-    if (currentPage === 'mapa') {
-        mainBar.style.backgroundColor = '#DC3B53';
-    } else {
-        // Garante que os ícones na main-bar sejam brancos
-        mainBar.querySelectorAll('.icon img').forEach((img) => {
-            img.style.filter = 'brightness(0) invert(1)';
-        });
-    }
+    links.forEach(link => {
+        const page = link.getAttribute('data-page');
+        const img = link.querySelector('img');
+        if (currentPath === `${page}.html`) {
+            // Adiciona a classe ao ícone ativo
+            img.classList.add('active-icon');
+        } else {
+            // Garante que os ícones não ativos não tenham a classe
+            img.classList.remove('active-icon');
+        }
+    });
 });
+
+
