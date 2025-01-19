@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>acompanha.me - cadastro</title>
+    <link rel="stylesheet" href="cadastro.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="view view-main">
+      <div class="page" data-name="cadastro">
+        <div class="header">
+          <a href="/entrar/" class="back-button">
+            <a href="/entrar/" class="back-button">
+              <img src="img/botao_deslogar.svg" alt="Voltar" />
+            </a>
+          </a>
+        </div>
+        <div class="container">
+          <div class="titulo">Criando conta</div>
+        </div>
+        <div class="formulario">
+          <form action="https://10.0.2.2:8000/cadastro" method="POST">
+            <div class="form-group">
+              <label for="nome">Nome completo:</label>
+              <input
+                required
+                type="text"
+                name="nome"
+                id="id_nome"
+                placeholder="Nome completo"
+                class="nome"
+              />
+            </div>
+            <div class="form-group">
+              <label for="cpf">CPF:</label>
+              <input
+                required
+                type="text"
+                name="cpf"
+                id="id_cpf"
+                placeholder="CPF"
+                class="cpf"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input
+                required
+                type="email"
+                name="email"
+                id="id_email"
+                placeholder="Email"
+                class="email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="senha">Senha:</label>
+              <input
+                required
+                type="password"
+                name="senha"
+                id="id_senha"
+                placeholder="senha"
+                class="senha"
+              />
+            </div>
+            <div class="form-group">
+              <label for="confirmar_senha">Confirmar senha:</label>
+              <input
+                required
+                type="password"
+                name="confirmar_senha"
+                id="id_confirmar_senha"
+                placeholder="Confirmar senha"
+                class="confirmar_senha"
+              />
+            </div>
+            <input
+              type="submit"
+              value="Cadastrar"
+              class="btn btn-primary btn-block"
+            />
+          </form>
+        </div>
+        <div class="logo-banner">
+          <img src="img\tela_login_logomarca.svg" alt="logo do acompanhame" a />
+        </div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+    <!-- jQuery -->
+    <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>
+    <!-- Roteamento do app-->
+    <script type="text/javascript" src="js/routes.js"></script>
+    <script src="cordova.js"></script>
+  </body>
+</html>

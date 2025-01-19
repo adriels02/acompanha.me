@@ -74,12 +74,57 @@ var app = new Framework7({
         },
       },
     },
+    {
+      path: "/entrar/",
+      url: "/entrar.html",
+      animate: false,
+      on: {
+        pageBeforeIn: function (event, page) {
+          // fazer algo antes da página ser exibida
+        },
+        pageAfterIn: function (event, page) {
+          // fazer algo depois da página ser exibida
+        },
+        pageInit: function (event, page) {
+          const link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = 'css/entrar.css';
+          document.head.appendChild(link);
+        },
+        pageBeforeRemove: function (event, page) {
+          // fazer algo antes da página ser removida do DOM
+        },
+      },
+    },
+    {
+      path: "/cadastro/",
+      url: "cadastro.html",
+      animate: false,
+      on: {
+        pageBeforeIn: function (event, page) {
+          // fazer algo antes da página ser exibida
+        },
+        pageAfterIn: function (event, page) {
+          // fazer algo depois da página ser exibida
+        },
+        pageInit: function (event, page) {
+          const link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = 'css/entrar.css';
+          document.head.appendChild(link);
+        },
+        pageBeforeRemove: function (event, page) {
+          // fazer algo antes da página ser removida do DOM
+        },
+      },
+    },
   ],
   // ... other parameters
 });
 
 //Para testes direto no navegador
 var mainView = app.views.create(".view-main", { url: "/index/" });
+
 
 //EVENTO PARA SABER O ITEM DO MENU ATUAL
 app.on("routeChange", function (route) {
@@ -99,7 +144,7 @@ app.on("routeChange", function (route) {
 function onDeviceReady() {
   //Quando estiver rodando no celular
   var mainView = app.views.create(".view-main", { url: "/index/" });
-
+  
   //COMANDO PARA "OUVIR" O BOTAO VOLTAR NATIVO DO ANDROID
   document.addEventListener(
     "backbutton",

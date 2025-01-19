@@ -22,34 +22,11 @@
 </head>
 
 <body>
-
-    <h1>Testando a API do Django</h1>
-    <button id="testApiBtn">Testar API</button>
-    <div id="response"></div>
-
-    <script>
-        document.getElementById('testApiBtn').addEventListener('click', () => {
-            fetch('https://10.0.2.2:8000/api/test/')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('response').innerText = JSON.stringify(data);
-                })
-                .catch(error => console.error('Erro ao chamar API:', error));
-        });
-    </script>
-
-
-
-
-
-
-
     <!-- App root element -->
     <div id="app">
 
         <!-- Your main view, should have "view-main" class -->
         <div class="view view-main">
-
             <!-- TAB BAR-->
             <div class="toolbar toolbar-bottom">
                 <div class="toolbar-inner display-flex">
@@ -84,6 +61,7 @@
                 <div class="page-content">
                     <div class="block">
                         Conteúdo do link 1
+                        <a href="/entrar/">ENTRE AQUI</a>
                     </div>
                 </div>
             </div>

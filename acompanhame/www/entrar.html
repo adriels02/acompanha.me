@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>acompanha.me - login</title>
+    <link rel="stylesheet" href="css/entrar.css" />
+  </head>
+  <body>
+    <div class="page" data-name="entrar">
+        <div class="header">
+            <a href="bem_vindo.html" class="back-button">
+                <img src="img/botao_deslogar.svg" alt="Voltar" />
+            </a>
+        </div>
+        <div class="container">
+            <div class="logo-banner">
+                <img src="img/tela_login_logomarca.svg" alt="logo do acompanhame" />
+            </div>
+        </div>
+        <div class="formulario">
+            <form action="URL" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="cpf">CPF:</label>
+                    <input required type="text" name="cpf" id="id_cpf" placeholder="CPF" class="cpf" />
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input required type="password" name="senha" id="id_senha" placeholder="Senha" class="senha" />
+                </div>
+                <input type="submit" value="Entrar" class="btn btn-primary btn-block" />
+                <div class="link-cadastro">
+                    <a href="/cadastro/">Não possui uma conta? - Clique aqui</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
