@@ -1,22 +1,9 @@
-//INICIALIZAÇÃO DO F7 QUANDO DISPOSITIVO ESTÁ PRONTO
-document.addEventListener("deviceready", onDeviceReady, false);
 var app = new Framework7({
-  // App root element
   el: "#app",
-  // App Name
   name: "My App",
-  // App id
   id: "com.myapp.test",
-  // Enable swipe panel
-  panel: {
-    swipe: true,
-  },
-  dialog: {
-    buttonOk: "Sim",
-    buttonCancel: "Cancelar",
-  },
-  // Add default routes
   routes: [
+<<<<<<< HEAD
     {
       path: "/index/",
       url: "index.html",
@@ -112,10 +99,17 @@ var app = new Framework7({
         },
       },
     },
+=======
+    { path: "/home/", url: "home.html", animate: false },
+    { path: "/alerta/", url: "alerta.html", animate: false },
+    { path: "/contatos/", url: "contatos.html", animate: false },
+    { path: "/sinais/", url: "sinais.html", animate: false },
+    { path: "/disque/", url: "disque.html", animate: false },
+>>>>>>> 90773496dba1767302c24a836b06ed9d61be4947
   ],
-  // ... other parameters
 });
 
+<<<<<<< HEAD
 //Para testes direto no navegador
 var mainView = app.views.create(".view-main", { url: "/index/" });
 
@@ -156,3 +150,9 @@ function onDeviceReady() {
     false
   );
 }
+=======
+// Criar visualização principal
+var mainView = app.views.create(".view-main", {
+  url: "/home/",
+});
+>>>>>>> 90773496dba1767302c24a836b06ed9d61be4947

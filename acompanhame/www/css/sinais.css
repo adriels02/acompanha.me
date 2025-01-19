@@ -1,0 +1,63 @@
+:root {
+    --branco: #ffff;
+    --preto: #2a2a2a;
+    --goiaba: #DC3B53;
+    --bordo: #BC005E;
+    --marinho: #0F2B72;
+    --azul: #00CBD4;
+}
+
+/* Garante que a página ocupe toda a viewport */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: var(--bordo);
+    color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+}
+
+/* Estilos para o conteúdo principal */
+#conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Garante que o conteúdo ocupe toda a largura */
+    margin-top: 1.5rem; /* Espaço extra no topo */
+    padding-bottom: 2.5rem; /* Espaço extra na parte inferior para a imagem */
+}
+
+.texto-container {
+    text-align: center;
+    margin-bottom: 8rem; /* Espaço entre título e frase */
+}
+
+#sinais-titulo {
+    font-size: 2.5rem;
+    margin: 0;
+    margin-top: 2rem;
+}
+
+#sinais-frase {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.imagem-container {
+    display: flex;
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    width: 100%; /* Garante que a imagem ocupe a largura completa do container */
+    margin-top: 2rem; /* Distância entre o texto e a imagem */
+    padding-bottom: 8rem; /* Garantir que a imagem tenha algum espaço na parte inferior */
+}
+
+.imagem-container img {
+    max-width: 90%; /* Ajusta o tamanho da imagem */
+    height: auto;
+}
+
+
+
