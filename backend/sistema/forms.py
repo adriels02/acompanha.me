@@ -6,7 +6,8 @@ class RegisterForm(forms.Form):
         widget=forms.TextInput(attrs={'placeholder': 'Nome completo', 'class': 'nome', 'id': 'id_nome'}),
         label='Nome completo'
     )
-    cpf = forms.EmailField(
+    cpf = forms.CharField(
+        max_length=11,
         widget=forms.TextInput(attrs={'placeholder': 'CPF', 'class': 'cpf', 'id': 'id_cpf'}),
         label='cpf'
     )
@@ -21,4 +22,17 @@ class RegisterForm(forms.Form):
     password_confirm = forms.CharField(
         widget=forms.PasswordInput(attrs={'placeholder': 'Confirme sua senha', 'class': 'confirmar_senha', 'id': 'id_confirmar_senha'}),
         label='Confirme sua senha'
+    )
+
+class LoginForm(forms.Form):
+
+    cpf = forms.CharField(
+        max_length=11,
+        widget=forms.TextInput(attrs={'placeholder': 'CPF', 'class': 'cpf', 'id': 'id_cpf'}),
+        label='cpf'
+    )
+
+    password = forms.CharField(
+        widget=forms.PasswordInput(attrs={'placeholder': 'Senha', 'class': 'senha', 'id': 'id_senha'}),
+        label='Senha'
     )

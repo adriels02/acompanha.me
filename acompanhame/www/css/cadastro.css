@@ -24,8 +24,10 @@ body {
 .logo-banner img {
     max-width: 400px; 
     height: auto;
-    margin-top: 15px;
+    margin: 15px auto 0; 
+    display: block; 
 }
+
 
 .titulo{
     color: #ffffff;
@@ -96,3 +98,17 @@ input[type="submit"]:hover {
     color: #d81b60;
 }
 
+.terms {
+    font-size: 14px;
+    color: #555;
+    margin-top: 20px;
+}
+
+.terms a {
+    color: #d81b60;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
