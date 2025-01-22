@@ -34,19 +34,20 @@ document.addEventListener('DOMContentLoaded', function () {
     // Insere o main-bar no final do body
     document.body.insertAdjacentHTML('beforeend', mainBarHTML);
 
-    // Identifica a página atual pelo pathname
-    const currentPath = window.location.pathname.split('/').pop();
-    const links = document.querySelectorAll('#main-bar .link');
+    const mainBar = document.getElementById('main-bar');
+    const initialHeight = mainBar.offsetHeight; // Altura inicial da barra
 
-    links.forEach(link => {
-        const page = link.getAttribute('data-page');
-        const img = link.querySelector('img');
-        if (currentPath === `${page}.html`) {
-            // Adiciona a classe ao ícone ativo
-            img.classList.add('active-icon');
+    // Detecta mudança de tamanho na janela para ajustar a barra
+    window.addEventListener('resize', () => {
+        const viewportHeight = window.innerHeight;
+
+        // Verifica se o teclado virtual está ativo
+        if (viewportHeight < window.screen.height * 0.85) {
+            // Aumenta a altura da barra
+            mainBar.style.height = '12vh';
         } else {
-            // Garante que os ícones não ativos não tenham a classe
-            img.classList.remove('active-icon');
+            // Restaura a altura original
+            mainBar.style.height = `${initialHeight}px`;
         }
     });
 });

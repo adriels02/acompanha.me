@@ -3,6 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   
     // Exibir a Splash Screen por 3 segundos e redirecionar para entrar.html
     setTimeout(() => {
-      window.location.href = "entrar.html";
+      window.location.href = "home.html";
     }, 3000);
   });

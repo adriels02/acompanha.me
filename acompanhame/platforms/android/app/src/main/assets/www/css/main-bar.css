@@ -38,8 +38,8 @@ body .main-bar a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10vw; /* Largura dos itens como uma porcentagem da largura da tela */
-    height: 10vw; /* Altura dos itens proporcional à largura */
+    width: 10vw;
+    height: 10vw;
     border-radius: 50%;
     background-color: transparent;
     cursor: pointer;

@@ -10,11 +10,11 @@
     <div id="app">
       <div class="view view-main">
         <div class="page" data-name="entrar">
-          <div class="header">
+          <!-- <div class="header">
             <a href="bem_vindo.html" class="back-button">
               <img src="img/botao_deslogar.svg" alt="Voltar" />
             </a>
-          </div>
+          </div> -->
           <div class="container">
             <div class="logo-banner">
               <img
@@ -53,7 +53,7 @@
                 class="btn btn-primary btn-block"
               />
               <div class="link-cadastro">
-                <a href="cadastro.html">Não possui uma conta? - Clique aqui</a>
+                <a href="cadastro.html">Não possui uma conta? Clique aqui</a>
               </div>
             </form>
           </div>
@@ -68,7 +68,7 @@
   const form = event.target;
   const formData = new FormData(form);
 
-  fetch("https://10.0.2.2:8000/entrar", {
+  fetch("https://172.26.176.1/entrar", {
     method: "POST",
     body: formData,
   })
