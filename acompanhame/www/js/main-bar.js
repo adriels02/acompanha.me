@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     // HTML da barra principal
     const mainBarHTML = `

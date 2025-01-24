@@ -5,7 +5,9 @@
   "description": "Aplicativo de Compartilhamento de Localização.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:old": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "cypress:open": "cypress open"
   },
   "keywords": [
     "ecosystem:cordova"
@@ -14,12 +16,18 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "cordova-android": "^13.0.0",
-    "cordova-browser": "^7.0.0"
+    "cordova-browser": "^7.0.0",
+    "cypress": "^13.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
   },
   "cordova": {
     "platforms": [
       "browser",
       "android"
     ]
+  },
+  "jest": {
+    "testEnvironment": "jest-environment-jsdom"
   }
 }
