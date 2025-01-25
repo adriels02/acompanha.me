@@ -21,19 +21,19 @@ const renderContacts = (contacts) => {
     contactCard.classList.add('contact-card');
 
     contactCard.innerHTML = `
+      <img src="img/tela_contatos_imagem_perfil.svg" alt="Foto do contato">
       <div class="contact-info">
         <p><strong>Nome:</strong> ${contact.name}</p>
         <p><strong>Telefone:</strong> ${contact.phone}</p>
       </div>
-      <div>
-        <button onclick="sendMessage(${index})">Enviar Mensagem</button>
+      <div id="buttons-card">
+        <button onclick="sendMessage(${index})" class="button-sos">SOS</button>
         <button onclick="deleteContact(${index})">Excluir</button>
       </div>
     `;
     contactsContainer.appendChild(contactCard);
   });
 };
-
 // Enviar mensagem
 const sendMessage = (index) => {
   const contacts = JSON.parse(localStorage.getItem('contacts'));

@@ -12,7 +12,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: var(--goiaba);
+    background-color: var(--bordo);
     color: var(--branco);
     display: flex;
     flex-direction: column;
