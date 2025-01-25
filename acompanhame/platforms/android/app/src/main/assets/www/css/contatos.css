@@ -5,24 +5,92 @@
     --bordo: #BC005E;
     --marinho: #0F2B72;
     --azul: #00CBD4;
-    --font-size-base: 1rem; /* Tamanho base da fonte */
 }
 
 /* Garante que a página ocupe toda a viewport */
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: var(--bordo); 
+    color: var(--branco);
     display: flex;
     flex-direction: column;
-    font-size: var(--font-size-base); /* Usando rem para fontes base */
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
 }
 
-/* Conteúdo principal */
-#contatos-page-desc {
+.texto-container {
     text-align: center;
-    font-size: 1.2rem; /* Usando rem para o tamanho da fonte */
-    margin: auto;
-    padding: 2vw; /* Usando unidades relativas à largura da viewport */
+    margin-bottom: 8rem; 
 }
 
+.titulo {
+    color: var(--branco);
+    font-size: 2rem;
+    font-family: 'DynaPuff', sans-serif;
+    margin-top: 3.5rem;
+  
+}
+
+#contatos-frase {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 4rem;
+}
+  
+  .header {
+    position: absolute;
+    top: 0.6rem; 
+    left: 0.6rem; 
+
+  }
+  
+  .add-contact {
+    
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .titulo {
+    color: var(--branco);
+    font-size: 2rem;
+    font-family: 'DynaPuff', sans-serif;
+  }
+  
+  .contacts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .contact-card {
+    background-color: var(--goiaba);
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  button {
+    background-color: var(--branco);
+    border: none;
+    color: var(--bordo);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  button:hover {
+    background-color: var(--goiaba);
+    color: var(--branco);
+  }
+  

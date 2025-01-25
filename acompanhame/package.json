@@ -17,6 +17,7 @@
   "devDependencies": {
     "cordova-android": "^13.0.0",
     "cordova-browser": "^7.0.0",
+    "cordova-plugin-geolocation": "^5.0.0",
     "cypress": "^13.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0"
@@ -25,7 +26,12 @@
     "platforms": [
       "browser",
       "android"
-    ]
+    ],
+    "plugins": {
+      "cordova-plugin-geolocation": {
+        "GPS_REQUIRED": "true"
+      }
+    }
   },
   "jest": {
     "testEnvironment": "jest-environment-jsdom"

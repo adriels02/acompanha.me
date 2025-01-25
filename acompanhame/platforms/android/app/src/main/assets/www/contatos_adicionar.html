@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <title>acompanha.me - adicionar contato</title>
+    <link rel="stylesheet" href="css/contatos_adicionar.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Adicionar Contato</h1>
+      <form id="add-contact-form">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" required />
+
+        <label for="phone">Telefone:</label>
+        <input type="tel" id="phone" required />
+
+        <label for="message">Mensagem:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Adicionar</button>
+      </form>
+    </div>
+    
+    <script src="./js/contatos.js"></script>
+    <script src="./js/routes.js"></script>
+    <script src="./js/contatos_adicionar.js"></script>
+  </body>
+</html>

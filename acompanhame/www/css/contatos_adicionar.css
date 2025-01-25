@@ -1,0 +1,50 @@
+:root {
+    --branco: #ffff;
+    --preto: #2a2a2a;
+    --goiaba: #DC3B53;
+    --bordo: #BC005E;
+    --marinho: #0F2B72;
+    --azul: #00CBD4;
+}
+
+/* Garante que a página ocupe toda a viewport */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bordo); 
+    color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+  .form-container {
+    background: white;
+    color: #bc005e;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-top: 1rem;
+  }
+  
+  button {
+    margin-top: 1rem;
+    background-color: #bc005e;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
