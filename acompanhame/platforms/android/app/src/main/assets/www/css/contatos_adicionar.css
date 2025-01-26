@@ -1,34 +1,56 @@
 :root {
-    --branco: #ffff;
-    --preto: #2a2a2a;
-    --goiaba: #DC3B53;
-    --bordo: #BC005E;
-    --marinho: #0F2B72;
-    --azul: #00CBD4;
+  --branco: #ffff;
+  --preto: #2a2a2a;
+  --goiaba: #DC3B53;
+  --bordo: #BC005E;
+  --marinho: #0F2B72;
+  --azul: #00CBD4;
 }
 
-/* Garante que a página ocupe toda a viewport */
+
 html, body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: var(--bordo); 
-    color: var(--branco);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bordo);
+  color: var(--branco);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
 }
 
+.titulo {
+  color: var(--branco);
+  font-size: 2rem;
+  font-family: 'DynaPuff', sans-serif;
+  margin-top: 3.5rem;
+  text-align: center;
+  margin-bottom: 1rem; 
+}
+
+#contatos-frase {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 1rem; 
+  margin-bottom: 0.5rem; 
+  text-align: center;
+  margin-bottom: 1rem; 
+}
+
+.header {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+}
   .form-container {
-    background: white;
-    color: #bc005e;
+    background: var(--branco);
+    color: var(--bordo);
     padding: 2rem;
-    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
-  
+
   form {
     display: flex;
     flex-direction: column;
@@ -40,11 +62,34 @@ html, body {
   
   button {
     margin-top: 1rem;
-    background-color: #bc005e;
-    color: white;
+    background-color: var(--bordo);
+    color: var(--branco);
     border: none;
     padding: 0.5rem;
     cursor: pointer;
     border-radius: 4px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-family: 'DynaPuff', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
+  button:hover {
+    background-color: var(--goiaba);
+    color: var(--branco);
+  }
+  
+  #name{
+    height: 2rem;
+    /* border: 1px solid var(--bordo); */
+  }
+
+  #phone{
+    height: 2rem;
+    /* border: 1px solid var(--bordo); */
+  }
+
+  #message{
+    height: 8rem;
+    /* border: 1px solid var(--bordo); */
+  }

@@ -2,14 +2,29 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover"/>
-    <title>acompanha.me - adicionar contato</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>acompanha.me - adicionar contatos</title>
     <link rel="stylesheet" href="css/contatos_adicionar.css" />
     <link rel="stylesheet" href="css/main-bar.css" />
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;700&display=swap"
+      rel="stylesheet"/>
   </head>
   <body>
+    <div class="view view-main">
+      <div class="header">
+        <a href="entrar.html" class="back-button">
+          <img src="img/botao_deslogar.svg" alt="botão deslogar" />
+        </a>
+      </div>
+
+        <div class="texto-container">
+          <div class="titulo">Adicionar<br>Contatos</div>
+        </div>
+
     <div class="form-container">
-      <h1>Adicionar Contato</h1>
       <form id="add-contact-form">
         <label for="name">Nome:</label>
         <input type="text" id="name" required />
@@ -20,10 +35,15 @@
         <label for="message">Mensagem:</label>
         <textarea id="message" required></textarea>
 
+        <p id="contatos-frase">
+          Sua localização poderá ser<br>compartilhada com os contatos 
+        </p>
+
         <button type="submit">Adicionar</button>
+
       </form>
     </div>
-    
+   
     <script src="./js/contatos.js"></script>
     <script src="./js/routes.js"></script>
     <script src="./js/main-bar.js"></script>

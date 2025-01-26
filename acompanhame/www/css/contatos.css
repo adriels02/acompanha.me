@@ -23,7 +23,7 @@ html, body {
 
 .texto-container {
   text-align: center;
-  margin-bottom: 1rem; /* Reduz o espaçamento entre a frase e os cards */
+  margin-bottom: 1rem; 
 }
 
 .titulo {
@@ -36,8 +36,8 @@ html, body {
 #contatos-frase {
   font-size: 1.25rem;
   font-weight: bold;
-  margin-top: 1rem; /* Reduz o espaço superior da frase */
-  margin-bottom: 0.5rem; /* Reduz o espaço inferior da frase */
+  margin-top: 1rem; 
+  margin-bottom: 0.5rem; 
 }
 
 .header {

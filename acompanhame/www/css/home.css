@@ -32,11 +32,11 @@ html, body {
     margin-top: 3.5rem;
 }
 
-.titulo{
+/* .titulo{
     color: var(--branco);
     font-size: 2rem;
     font-family: 'DynaPuff', sans-serif;
-}
+} */
 
 .link-alterar a {
     color: var(--branco);
@@ -50,8 +50,9 @@ html, body {
 
 #map {
     width: 100%;
-    height: 19rem; 
+    height: 22rem; /* anteriormente 19rem */
     border: 1px solid #ccc;
+    margin-top: 4rem; /* não existia */
   }
 
 .buttons{
