@@ -9,6 +9,7 @@ var app = new Framework7({
     { path: "/sinais/", url: "sinais.html", animate: false },
     { path: "/cadastro/", url: "cadastro.html", animate: false },
     { path: "/termos/", url: "termos_de_uso.html", animate: false },
+    { path: "/disque/", url: "disque.html", animate: false },
   ],
 });
 
