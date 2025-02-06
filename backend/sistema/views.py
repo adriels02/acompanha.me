@@ -33,10 +33,10 @@ def registro(request):
                 return JsonResponse({"status": "error", "message": "As senhas não coincidem."})
 
             if User.objects.filter(username=cpf).exists():
-                return JsonResponse({"status": "error", "message": "CPF já cadastrado."})
+                return JsonResponse({"status": "error", "message": "Credenciais já existentes."})
             
             if User.objects.filter(email=email).exists():
-                return JsonResponse({"status": "error", "message": "Email já cadastrado."})
+                return JsonResponse({"status": "error", "message": "Credenciais já existentes."})
         
             user = User.objects.create_user(username=cpf, email=email, password=password)
             user.first_name = fullname
@@ -54,7 +54,7 @@ def registro(request):
 
         else:
            
-            return JsonResponse({"status": "error", "message": form.errors})
+            return JsonResponse({"status": "error", "message": "Formulário inválido"})
 
     return JsonResponse({"status": "error", "message": f"Método não permitido: {request.method}"})
 
