@@ -61,3 +61,34 @@ class SignupTests(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json()['status'], 'error')
         self.assertIn("Credenciais já existentes.", response.json()['message'])  
+
+class IntegrationTests(TestCase):
+    
+    def setUp(self):
+        """Configuração inicial: cria um usuário de teste"""
+        self.user = User.objects.create_user(username="12345678901", email="teste@email.com", password="senha123")
+
+    def test_login_success(self):
+        """Testa se o login funciona com credenciais corretas"""
+        response = self.client.post(reverse('logar'), {"cpf": "12345678901", "password": "senha123"})
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json()["status"], "success")
+
+    def test_login_failure(self):
+        """Testa se o login falha com credenciais erradas"""
+        response = self.client.post(reverse('logar'), {"cpf": "12345678901", "password": "senhaerrada"})
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json()["status"], "error")
+
+    def test_signup(self):
+        """Testa se um novo usuário pode ser cadastrado"""
+        response = self.client.post(reverse('registro'), {
+            'fullname': 'Gustavo maia',
+            'cpf': '98765432100',
+            'email': 'gustavomaia@example.com',
+            'password': 'senha123',
+            'password_confirm': 'senha123'
+        })
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json()["status"], "success")
+        self.assertTrue(User.objects.filter(username="98765432100").exists())

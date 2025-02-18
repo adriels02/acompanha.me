@@ -54,7 +54,11 @@ def registro(request):
 
         else:
            
-            return JsonResponse({"status": "error", "message": "Formulário inválido"})
+                return JsonResponse({
+        "status": "error",
+        "message": "Formulário inválido",
+        "errors": form.errors  
+    })
 
     return JsonResponse({"status": "error", "message": f"Método não permitido: {request.method}"})
 
