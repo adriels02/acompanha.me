@@ -18,11 +18,10 @@ class Localizacao(models.Model):
     estado = models.CharField(max_length=100)
     latitude = models.CharField(max_length=100)
     longitude = models.CharField(max_length=100)
-    numero = models.IntegerField()
     usuario_cpf = models.ForeignKey(Usuario, on_delete=models.CASCADE, related_name='localizacoes')
 
     def __str__(self):
-        return f'{self.rua}, {self.numero}, {self.bairro}'
+        return f'{self.rua}, {self.bairro}'
 
 class Contato(models.Model):
     id = models.AutoField(primary_key=True)
